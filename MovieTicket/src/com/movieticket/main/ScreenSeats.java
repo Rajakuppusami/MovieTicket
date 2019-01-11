@@ -5,12 +5,14 @@ public class ScreenSeats {
 	private int noOfRows;
 	private int noOfColumns;
 	private SeatType seatType;
+	private String seatSequence;
 	
-	public ScreenSeats(String screenName, int noOfRows, int noOfColumns, SeatType seatType) {
+	public ScreenSeats(String screenName, int noOfRows, int noOfColumns, SeatType seatType, String seatSequence) {
 		this.screenName = screenName;
 		this.noOfRows = noOfRows;
 		this.noOfColumns = noOfColumns;
 		this.seatType = seatType;
+		this.seatSequence = seatSequence;
 	}
 	
 	public String getScreenName() {
@@ -37,11 +39,17 @@ public class ScreenSeats {
 	public void setSeatType(SeatType seatType) {
 		this.seatType = seatType;
 	}
+	public String getSeatSequence() {
+		return seatSequence;
+	}
+	public void setSeatSequence(String seatSequence) {
+		this.seatSequence = seatSequence;
+	}
 
 	@Override
 	public String toString() {
 		return "ScreenSeats [screenName=" + screenName + ", noOfRows=" + noOfRows + ", noOfColumns=" + noOfColumns
-				+ ", seatType=" + seatType + "]";
+				+ ", seatType=" + seatType + ", seatSequence=" + seatSequence + "]";
 	}
 	
 	
