@@ -52,6 +52,36 @@ public class mainMovie {
 		Movie movie=new Movie(movieName, movieType, movieLanguage, movieReleaseDate, movieDescription);
 		System.out.println(movie.toString());
 		
+		System.out.println("Enter the Theatre Name : ");
+		String theatreName=sc.nextLine();
+		
+		System.out.println("Movie adding..");
+		System.out.println("Movie Name : "+movie.getMovieName());
+		
+		System.out.println("Choose Screen name as given below ");
+		for (Screen screen : Screen.values()) { 
+            System.out.println(screen); 
+        }
+		Screen screenName=Screen.valueOf(sc.nextLine().toUpperCase());
+		
+		System.out.println("Enter Movie Start date in Theatre : dd/mm/yyyy");
+		Date startDate=dateFormat.parse(sc.nextLine());
+				
+		System.out.println("Enter Movie End date in Theatre: dd/mm/yyyy");
+		Date endDate=dateFormat.parse(sc.nextLine());
+		
+		System.out.println("Choose Movie Show as given below ");
+		for (Shows shows : Shows.values()) { 
+            System.out.println(shows); 
+        }
+		Shows show=Shows.valueOf(sc.nextLine().toUpperCase());	
+		
+		System.out.println("Enter the Movie Ticket Amount : ");
+		float ticketamount=sc.nextFloat();
+		
+		Theatres theatre=new Theatres(theatreName, movie, screenName, startDate, endDate, show, ticketamount);
+		System.out.println(theatre.toString());
+		
 		
 	}
 	
